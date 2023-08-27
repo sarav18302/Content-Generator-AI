@@ -1,0 +1,64 @@
+
+.login-container{
+  position:absolute;
+  display:flex;
+  flex-direction: column;
+  top: 30%;
+  left:35%;
+  padding: 10px;
+  background-color: whitesmoke;
+  width:40%;
+}
+input{
+  position:relative;
+  padding: 10px;
+  margin-top: 15px;
+  border-color: black; 
+}
+#text{
+  left:8%;
+  width: 80%;
+}
+#button{
+  left:43%;
+  width:fit-content;
+  background-color :black;
+  color:white;
+}
+h1{
+  padding:10px;
+  text-align: center ;
+}
+#Text1{
+  position:absolute;
+  padding: 10px;
+  margin-top: 10px;
+  font-size:1rem;
+  left:30%;
+  top:10%
+}
+.textarea-container{
+  left:10%;
+  border-color: black;
+  height: fit-content;
+  width: auto;
+  display: grid;
+}
+.output{
+  position:absolute;
+  left: 30%;
+  top: 90%;
+  padding: 10px;
+  margin-top: 10px;
+  font-size:1rem;
+  height: 60%;
+  width: 36%;
+  border-color: black;
+  background-color: whitesmoke;
+}
+.button1{
+position: absolute;
+left: 45%;
+top: 80%;
+
+}
