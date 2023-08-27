@@ -15,7 +15,7 @@ def generate_best_beam(model, tokenizer, prompt, max_length=700, num_beams=5, te
     input_ids = tokenizer.encode(prompt, return_tensors="pt")
     beam_outputs = model.generate(
         input_ids,
-        max_length=max_length + len(input_ids[0]),  # Account for the length of the input
+        max_length=max_length + len(input_ids[0]),  
         num_beams=num_beams,
         temperature=temperature,
         no_repeat_ngram_size=2,
@@ -27,10 +27,11 @@ def generate_best_beam(model, tokenizer, prompt, max_length=700, num_beams=5, te
     return generated_text
 
 
-@app.route('/',methods=['GET'])
+@app.route('/',methods=['GET','POST'])
 def result():
     
-    prompt="Im a boy from little town"
+    request_data = request.get_json()  
+    prompt = request_data.get('prompt')
     generated_text = generate_best_beam(model, tokenizer, prompt)
     return jsonify({"predict":generated_text }) 
 if __name__ == "__main__":
